@@ -10,7 +10,6 @@ RUN dotnet restore
 COPY Titles.Api/. ./Titles.Api/
 WORKDIR /source/Titles.Api
 RUN rm -r obj
-RUN rm -r bin
 RUN dotnet publish -c release -o /app
 
 # final stage/image
